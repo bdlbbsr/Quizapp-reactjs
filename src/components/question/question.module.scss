@@ -1,0 +1,35 @@
+.question{
+    color: var(--dark-gray);
+    font-size:40px
+}
+.arrowBtn{color:  var(--dark-gray); stroke: var(--dark-gray); stroke-width: 1px;}
+.ansSection{background-color: var(--dark-blue); padding: 2rem;}
+.quesSection{background-color: #fff; padding: 2rem;}
+.ansSection ul{ counter-reset: listStyle;}
+.ansOptions{ display: block;
+    padding: 1em 2em;
+    text-align: left;
+    color: white;
+    background: var(--light-blue);
+    margin-bottom: 10px;
+    border-left: 4px solid #fff;
+    font-weight: bold;
+    counter-increment: listStyle;
+    background: linear-gradient(to left, var(--light-blue) 50%, #fff 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out; cursor: pointer;
+
+     @media (min-width: 768px) {&.active{background: #fff;  color: var(--dark-blue);} }
+}
+
+ 
+.ansOptions:hover {
+        background-position: left;
+        color: var(--dark-blue);
+}
+ 
+.ansOptions::before {
+        margin-right: 1em;
+        content: counter(listStyle, lower-alpha);
+}
+

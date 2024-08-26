@@ -1,4 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-blue: #0e46fd;
+  --dark-gray: #404246;
+  --light-blue: #2057fd;
+  --light-gray: #68708b;
+}
+
 body {
+  background-color: #d8ddeb;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,7 +19,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.gameBaord{width: 500px; margin: 2rem auto; padding: 0;}
+
+@media (max-width: 767px) {.gameBaord{width:90%; margin: 1rem auto;} }
+
+button:disabled,
+button[disabled]{
+  visibility: hidden;
 }
+
+.progress-bar-border{border-bottom: solid 2px #d7ddf3;}
+.progress-bar{height: 10px; background-color: var(--dark-blue);}
+.finishBtn{background-color: #000; color: #fff; border: 0; padding: 0.5rem 1.3rem; font-weight: bold; }
+.noVisible{visibility: hidden;}
